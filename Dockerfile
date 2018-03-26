@@ -19,10 +19,15 @@ RUN apt-get update \
 	openjdk-8-jdk\
 	wget\
 	maven\
+	apt-transport-https\
+        ca-certificates\
+        curl\
+        software-properties-common\
  	&& apt-get clean
 
+
 # Copping and configuring jenkins
-ADD jenkins.war /home/jenkins
+RUN wget http://mirrors.jenkins.io/war-stable/latest/jenkins.war -P /home/jenkins
 ENV JENKINS_HOME="/home/jenkins/"
 RUN mkdir /home/jenkins/keys-container && chown jenkins.jenkins /home/jenkins/keys-container
 
