@@ -5,8 +5,7 @@ services:
     ports:
      - "8080:8080"
     volumes:
-     - $DOCKER_VOLUMES/jenkins:/home/jenkins
-     - $DOCKER_VOLUMES/keys-container:/home/jenkins/keys-container
+     - $DOCKER_VOLUMES/jenkins-docker:/home/jenkins/jenkins_home
     entrypoint:
      - java
      - -jar
