@@ -30,5 +30,5 @@ USER jenkins
  
 WORKDIR /home/jenkins/
 
-# expose the web port
+# expose the jenkins port
 EXPOSE 8080
